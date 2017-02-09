@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Record Form</title>
+<script type="text/JavaScript" src="Assignment4check.js"></script>
+<link rel="stylesheet" href="Assignment3Style.css" />
+</head>
+<body style="background-image: url(scenicdrone.jpg);">
+<form name="survey1" method="post"  action="insert.php" id="form" onsubmit="return checkFilled();" style = "width: 300px; text-align: center; vertical-align: middle; margin-left:40%; background-color:light blue;">
+			<fieldset style="background-color: #4CAF50;">
+				Vehicle Name: <input type="text" name="vname" id="vname"><hr>
+				Manufacturer: <input type="text" name="vman" id="vman"><hr>
+				Color: <input type="text" name="vcolor" id="vcolor"><hr>
+				Price: <input type="number" name="quantity" step="any"><hr>
+				Type: 
+				<select name="type">
+					<option value="Land">Land</option>
+					<option value="Air">Air</option>
+					<option value="Both">Both</option>
+				</select><hr>
+				<input type="reset" onclick="alert('You have reset the form');"/><br>
+				<input type="submit" />
+			</fieldset>
+		</form>
+</div>		
+</body>
+</html>

@@ -1,0 +1,281 @@
+.bg {
+    background: url(../../images/plan_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.outside {
+    padding: 20px;
+}
+
+#wrapper {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 2px;
+    position: relative;
+    margin-top: 80px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scroll: touch;
+    min-height: 670px;
+}
+
+.pane {
+    visibility: hidden;
+    opacity: 0;
+    left: 40px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease;
+}
+
+.pane .pane-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+}
+
+.pane .pane-title .advance, .pane .pane-title .retreat {
+    float: right;
+    color: #418040;
+    cursor: pointer;
+}
+
+.pane .pane-title .retreat {
+    margin-right: 15px;
+}
+
+.pane .pane-title .title {
+    color: rgba(0, 0, 0, 0.4);
+    float: left;
+}
+
+.pane .pane-content {
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.pane .pane-content-intro {
+    margin: 10px auto 15px;
+    font-size: 18px;
+    text-align: center;
+    color: #418040;
+    font-weight: 700;
+}
+
+.pane .login-warning {
+    color: #D62B11;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+    float: left;
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -10px;
+    transition: all 0.25s ease;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.pane .login-warning.active {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.pane .button {
+    width: 50%;
+    padding: 9px;
+    height: 100%;
+    height: inherit;
+    float: left;
+    color: #418040;
+    border: 1px solid #418040;
+    border-radius: 2px 0px 0px 2px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.pane .button[data-leader="0"] {
+    border-radius: 0px 2px 2px 0px;
+}
+
+.pane .button:hover {
+    background: rgba(65, 128, 64, 0.1);
+}
+
+.pane .button div {
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.pane .button.active {
+    color: white;
+    background: #418040;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.pane label {
+    float: left;
+    clear: both;
+    color: #418040;
+    font-weight: 700;
+    margin: 20px auto 7px;
+}
+
+.pane input, .pane textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 1px;
+    -webkit-appearance: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.2s ease;
+    -webkit-user-select: auto;
+}
+
+.pane select {
+    width: 100%;
+    -webkit-appearance: none;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.pane textarea {
+    height: 230px;
+}
+
+.pane input:focus, .pane textarea:focus {
+    box-shadow: 0px 0px 5px 2px rgba(65,128,64,0.4);
+    border-color: #418040;
+}
+
+.pane .checklist {
+    position: relative;
+}
+
+.pane .checklist .add-checklist-item, .pane .location-checklist .add-checklist-item {
+    padding: 10px 15px;
+    background: #418040;
+    color: white;
+    font-size: 14px;
+    border-radius: 2px;
+    padding-left: 35px;
+    position: relative;
+    float: right;
+    margin-top: -45px;
+    cursor: pointer;
+}
+
+.pane .checklist .add-checklist-item i, .pane .location-checklist .add-checklist-item i {
+    font-size: 20px;
+    margin-right: 10px;
+    position: absolute;
+    left: 15px;
+}
+
+.pane .checklist .checklist-item, .pane .location-checklist .checklist-item {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.pane .checklist .checklist-item::after {
+    content: " ";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: #418040;
+    right: 10px;
+    top: 15px;
+
+}
+
+.pane .checklist .checklist-item.valid::after {
+    content: "\f00c";
+}
+
+.pane .success-marker, .pane .login-marker {
+    background: #418040;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    position: relative;
+    color: white;
+}
+
+.pane .login-marker {
+    background: #B0331A;
+}
+
+.pane .login-marker i {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    height: 120px;
+}
+
+.pane .success-marker i, .pane .login-marker i {
+    font-size: 100px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.pane .login {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.pane .login input {
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.pane .login input[type="submit"] {
+    background: #418040;
+    -webkit-appearance: none;
+    color: white;
+    border-radius: 2px;
+    transition: opacity 0.15s ease;
+    -webkit-font-smoothing: subpixel-antialiased;
+    cursor: pointer;
+}
+
+.pane .login input[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+.pane.active {
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+}
+
+.pane.done {
+    visibility: hidden;
+    opacity: 0;
+    left: -20px !important;
+}

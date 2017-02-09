@@ -1,0 +1,187 @@
+.grid-inner {
+    padding: 10px;
+    overflow: hidden;
+}
+
+#splash {
+    background-image: url(../images/plan_bg.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.idea {
+    width: 100%;
+    overflow: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.25s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+}
+
+.idea:first-child {
+    padding-top: 5px;
+}
+
+.idea:last-child {
+    border-bottom: 0px solid transparent;
+}
+
+.idea .grid-item {
+    overflow: hidden;
+}
+
+.idea .vote {
+    float: left;
+    margin-right: 15px;
+}
+
+.idea .vote i {
+    font-size: 20px;
+    cursor: pointer;
+    color: #939393;
+}
+
+.idea_image_wrapper {
+    height: 200px;
+    width: 300px;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.idea_image_wrapper i {
+    position: absolute;
+    color: white;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    z-index: 3;
+    font-size: 50px;
+    text-align: center;
+    z-index: 3;
+}
+
+.idea_image_wrapper .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.idea_image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    float: left;
+    position: relative;
+}
+
+.idea .idea_desc {
+    color: white;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #3a3a3a;
+    overflow: hidden;
+}
+
+.idea .idea_desc .title {
+    font-size: 20px;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.idea .idea_desc .category {
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    opacity: 0.7;
+    text-transform: capitalize;
+}
+
+.idea .idea_desc .description {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.idea .idea_desc .checklist {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.idea .idea_desc .checklist span {
+    font-weight: 700;
+}
+
+.idea .idea_desc .checklist ul {
+    margin-top: 0;
+}
+
+.idea .idea_desc .checklist ul li {
+    font-weight: 400;
+}
+
+.idea .idea_desc .checklist ul span {
+    margin-top: 0;
+    font-weight: 400;
+    color: rgba( 0, 0, 0, 0.5);
+}
+
+.locations {
+    padding-left: 120px;
+}
+
+.idea .location {
+    margin-bottom: 10px;
+}
+
+.idea .location .location_image {
+    height: 75px;
+    width: 75px;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    margin-right: 10px;
+}
+
+.idea .location .location_address {
+    opacity: 0.7;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#pagination {
+    float: right;
+    text-align: right;
+}
+
+#pagination ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+#pagination ul li {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+#pagination ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #418040;
+}
+.content-one {
+    display:none;
+}
