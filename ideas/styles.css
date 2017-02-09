@@ -1,0 +1,165 @@
+.grid-inner {
+    padding: 10px;
+    overflow: hidden;
+}
+
+#splash {
+    background-image: url(../images/idea_bg.jpg);
+}
+
+.idea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.25s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+}
+
+.idea:first-child {
+    /* padding-top: 5px; */
+}
+
+.idea:last-child {
+    border-bottom: 0px solid transparent;
+}
+
+.idea .grid-item {
+    overflow: hidden;
+}
+
+.idea .vote {
+    float: left;
+    margin-right: 15px;
+}
+
+.idea .vote i {
+    font-size: 20px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.idea_image_wrapper {
+    height: 200px;
+    width: 300px;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.idea_image_wrapper i {
+    color: white;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 3;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.idea_image_wrapper .overlay {
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.idea_image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    float: left;
+    position: relative;
+}
+
+.idea .idea_desc {
+    color: white;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #3a3a3a;
+    overflow: hidden;
+}
+
+.idea .idea_desc .title {
+    font-size: 20px;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.idea .idea_desc .category, .idea .idea_desc .post_date {
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    color: #939393;
+}
+
+.idea .idea_desc .category span, .idea .idea_desc .post_date span {
+    color: #418040;
+}
+
+.idea .idea_desc .description {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.idea .idea_desc .checklist {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.idea .idea_desc .checklist span {
+    font-weight: 700;
+}
+
+.idea .idea_desc .checklist ul {
+    margin-top: 0;
+}
+
+.idea .idea_desc .checklist ul li {
+    font-weight: 400;
+}
+
+.idea .idea_desc .checklist ul span {
+    margin-top: 0;
+    font-weight: 400;
+    color: rgba( 0, 0, 0, 0.5);
+}
+
+#pagination {
+    float: right;
+    text-align: right;
+}
+
+#pagination ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+#pagination ul li {
+    display: inline-block;
+    margin-right: 6px;
+}
+
+#pagination ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #418040;
+}
