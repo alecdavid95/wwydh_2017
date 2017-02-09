@@ -1,0 +1,514 @@
+.overlay {
+    position: fixed;
+    top: 0; left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay.open .wrapper {
+    transform: scale(1);
+}
+
+.overlay > .wrapper .overlay_title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.overlay > .wrapper .overlay-inner {
+    padding: 15px;
+}
+
+#new-plan .wrapper {
+    max-width: 600px;
+    height: 230px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    background: white;
+    border-radius: 2px;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+}
+
+#new-plan input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#new-plan input.empty {
+    border-color: red;
+    box-shadow: 0px 0px 5px 0px red;
+}
+
+#new-plan .label {
+    font-weight: 700;
+    color: #418040;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#new-plan input:focus {
+    border-color: #418040;
+    outline: 0;
+    box-shadow: 0px 0px 5px 0px rgba(65,128,64,0.5);
+}
+
+#new-plan .btn-group {
+    float: right;
+    margin-top: 30px;
+}
+
+#new-plan .btn-group .plan-button {
+    padding: 10px 12px;
+    color: white;
+    background: #418040;
+    border-radius: 2px;
+    float: right;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.25s ease;
+}
+
+#new-plan .btn-group .plan-button:hover {
+    opacity: 0.8;
+}
+
+#new-plan .btn-group #cancel-create-plan.plan-button {
+    background: rgba(0, 0, 0, 0.2);
+    color: #3a3a3a;
+}
+
+.pane {
+    display: none;
+}
+
+.pane.active {
+    display: block;
+}
+
+#content {
+    width: 84%;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    z-index: 8;
+    overflow: hidden;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scroll: touch;
+    /*background: rgba(0, 0, 0, 0.05);*/
+    background: #F2F5F3;
+}
+
+#content .content-shadow {
+    background: white;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar {
+    width: 16%;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #418040;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    min-width: 250px;
+}
+
+.inner {
+    margin-top: 80px;
+}
+
+#sidebar ul {
+    padding: 0px;
+}
+
+#sidebar li {
+    color: #d5edd5;
+    text-transform: Capitalize;
+    list-style-type: none;
+    padding: 10px 0px 10px 45px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease;
+    margin-left: 10px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+#sidebar li.active {
+    font-weight: 900;
+    color: white;
+}
+
+#sidebar li i {
+    margin-right: 15px;
+    font-size: 26px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 25px;
+    text-align: center;
+    width: 30px;
+}
+
+#sidebar li .sidebar_badge {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 22px;
+    margin: auto;
+    padding: 3px 8px;
+    color: #418040;
+    background: #d5edd5;
+    border-radius: 3px;
+    font-weight: 400 !important;
+}
+
+#sidebar .sidebar-separator {
+    background: #d5edd5;
+    width: 100%;
+    height: 1px;
+    opacity: 0.2;
+    margin: 25px 0px;
+}
+
+#sidebar .new-menu #new-menu-header {
+    color: #d5edd5;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#sidebar .new-menu .new-menu-link {
+    width: 100%;
+    padding: 10px;
+    color: #d5edd5;
+    border-radius: 1px;
+    border: 1px solid #d5edd5;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#sidebar .new-menu .new-menu-link:last-child {
+    margin-bottom: 0px;
+}
+
+#sidebar .new-menu .new-menu-link:hover {
+    background: #d5edd5;
+    color: #418040;
+}
+
+#content #user_intro {
+    border-radius: 2px;
+    padding: 15px 20px;
+    position: relative;
+    margin-bottom: 45px;
+}
+
+#content #user_intro .image {
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+#content #user_intro .name_rank {
+    float: left;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+#content #user_intro #name {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+#content #user_intro #rank {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#content #user_intro #counters {
+  float: right;
+  margin-top: 35px;
+}
+
+#content #user_intro #counters > div {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+#content #user_intro #counters .counter_value {
+  text-align: center;
+  color: #418040;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#content #user_intro #counters .counter_label {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  text-align: center;
+}
+
+#content #overview-plans .content-shadow{
+    padding: 15px 20px;
+}
+
+#content #overview-plans #plan-categories {
+    float: right;
+}
+
+#content #overview-plans .plan-table {
+    display: none;
+}
+
+#content #overview-plans .plan-table.active {
+    display: block;
+}
+
+#content #overview-plans table {
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+#content #overview-plans table th {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: normal;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 7px;
+}
+
+
+#content #overview-plans table td {
+    padding: 7px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+}
+
+#content #overview-plans table td.em {
+    font-weight: 600;
+    color: #418040;
+}
+
+#content #overview-plans table tr:last-child > td {
+    border-bottom-color: transparent;
+}
+
+#content #overview-plans td  .image {
+    height: 40px;
+    width: 65px;
+    background-size: cover;
+    position: relative;
+    border-radius: 2px;
+    float: left;
+}
+
+#content #overview-plans td.row-count div {
+    padding: 0px 10px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#content #overview-plans td > i {
+    color: #5C5C5C;
+    float: left;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#content #overview-plans td .btn {
+    padding: 8px 12px;
+    color: white;
+    border-radius: 2px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    text-transform: none;
+}
+
+#content #overview-plans td .btn.publish {
+    background: #418040;
+}
+
+#content #overview-plans td .btn.unpublish {
+    background: #AD0E16;
+}
+
+#content #overview-plans td .btn > i {
+    margin-left: 10px;
+    font-size: 20px;
+    display: none;
+}
+
+#content #overview-plans .empty-table {
+    color: #5C5C5C;
+    text-align: center;
+    display: none;
+}
+
+#content #overview-plans .empty tr {
+    display: none;
+}
+
+#content #overview-plans .active.empty .empty-table {
+    display: block;
+}
+
+#content #overview-plans .empty-table .btn {
+    background: #418040;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 2px;
+    max-width: 200px;
+    margin: 10px auto auto;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 2px solid #418040;
+    text-transform: uppercase;
+}
+
+#content #overview-plans .empty-table .btn:hover {
+    color: #418040;
+    background: white;
+}
+
+#content #overview-plans tr td.edit {
+    color: #418040;
+    text-transform: lowercase;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#content #overview-plans div.plan-info {
+    width: 80%;
+    height: 100px;
+    position: absolute;
+    background: white;
+    display: none;
+    z-index: 10;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#content #overview-plans div.plan-info:after {
+    content: "";
+    display: block; /* reduce the damage in FF3.0 */
+    position: absolute;
+    top: -15px;
+    left: 50px;
+    width: 0;
+    border-width: 0px 15px 10;
+    border-style: solid;
+    border-color: #f3961c transparent;
+}
+
+#content #overview-plans div.plan-info .inner {
+    position: relative;
+    box-sizing: border-box;
+}
+
+#content #overview-plans div.plan-info.show {
+    display: block;
+}
+
+.sub-cat-title {
+    color: #5C5C5C;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#content .plans .plan {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#content  .plans .plan-inner {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+#content  .plans .plan:first-child {
+    margin-left: 0px;
+    border-top: 1px solid transparent;
+}
+
+#content  .plans .plan .location_image {
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 125px;
+    position: relative;
+    border-radius: 2px;
+    float: left;
+    margin-right: 20px;
+}
+
+#content  .plans .plan .plan_title {
+    font-weight: 700;
+    color: #418040;
+    padding: 10px 0 0;
+    text-transform: uppercase;
+}
+
+#content  .plans .plan .location_image i {
+    color: white;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+#content  .plans .plan .location_address {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 6px;
+}
